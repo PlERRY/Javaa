@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package GerenciamentoClass;
-
+import java.util.ArrayList;
 /**
  *
  * @author hugo
  */
 public class Produto {
-   int idProdutoUnit;
+   long idProdutoUnit;
    String nome;
    float valor_compra; 
    float valor_venda;
@@ -18,9 +18,17 @@ public class Produto {
    int quantidade_min;
    float lucro_produto;
    
-   public static void registrar(){
-   
-   
+   public void registrar(){
+       
+       ArrayList<Produto> lista = new ArrayLista<Produto>() ; 
+       Produto p ;
+       p= new Produto();
+       long id_produto ; 
+      String produto_nome = "Leite" ;
+       
+               p.setnome(produto_nome);
+       
+       
    }
    
    public int buscarProd(int x){
