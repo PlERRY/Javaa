@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package GerenciamentoClass;
-import java.util.ArrayList;
+
 /**
  *
  * @author hugo
@@ -20,16 +20,7 @@ public class Produto {
    
    public void registrar(){
        
-       ArrayList<Produto> lista = new ArrayLista<Produto>() ; 
-       Produto p ;
-       p= new Produto();
-       long id_produto ; 
-      String produto_nome = "Leite" ;
-       
-               p.setnome(produto_nome);
-       
-       
-   }
+     }
    
    public int buscarProd(int x){
        

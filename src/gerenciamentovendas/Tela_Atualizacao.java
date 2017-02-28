@@ -48,7 +48,7 @@ public class Tela_Atualizacao extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        jButton3 = new javax.swing.JButton();
+        botao_voltaEstoque = new javax.swing.JButton();
 
         jLabel2.setText("jLabel2");
 
@@ -94,8 +94,13 @@ public class Tela_Atualizacao extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(102, 102, 102));
         jLabel9.setText("Atualização de Produtos ");
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Knob Snapback_1.png"))); // NOI18N
-        jButton3.setToolTipText("Voltar");
+        botao_voltaEstoque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Knob Snapback_1.png"))); // NOI18N
+        botao_voltaEstoque.setToolTipText("Voltar");
+        botao_voltaEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botao_voltaEstoqueActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,7 +138,7 @@ public class Tela_Atualizacao extends javax.swing.JFrame {
                                         .addComponent(jButton1))))
                             .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(jButton3)
+                                .addComponent(botao_voltaEstoque)
                                 .addGap(97, 97, 97)
                                 .addComponent(jLabel9)))
                         .addGap(0, 0, Short.MAX_VALUE))
@@ -153,7 +158,7 @@ public class Tela_Atualizacao extends javax.swing.JFrame {
                         .addComponent(jLabel9)
                         .addGap(25, 25, 25))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(botao_voltaEstoque)
                         .addGap(18, 18, 18)))
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -195,6 +200,14 @@ public class Tela_Atualizacao extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
+    private void botao_voltaEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_voltaEstoqueActionPerformed
+        // TODO add your handling code here:
+        Tela_estoque telaE = new Tela_estoque();
+        telaE.setLocationRelativeTo(null);
+        telaE.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_botao_voltaEstoqueActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -231,9 +244,9 @@ public class Tela_Atualizacao extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botao_voltaEstoque;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

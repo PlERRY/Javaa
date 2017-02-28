@@ -48,7 +48,7 @@ public class Tela_venda extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        jButton3 = new javax.swing.JButton();
+        volta_menu = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -148,8 +148,13 @@ public class Tela_venda extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setText("Código:");
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Knob Snapback_1.png"))); // NOI18N
-        jButton3.setToolTipText("Voltar");
+        volta_menu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Knob Snapback_1.png"))); // NOI18N
+        volta_menu.setToolTipText("Voltar");
+        volta_menu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volta_menuActionPerformed(evt);
+            }
+        });
 
         jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Knob Cancel.png"))); // NOI18N
         jButton4.setToolTipText("Excluir item ");
@@ -202,7 +207,7 @@ public class Tela_venda extends javax.swing.JFrame {
                         .addContainerGap())
                     .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 770, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton3)
+                        .addComponent(volta_menu)
                         .addGap(173, 173, 173)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -212,7 +217,7 @@ public class Tela_venda extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
+                    .addComponent(volta_menu)
                     .addComponent(jLabel10))
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -301,6 +306,14 @@ public class Tela_venda extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void volta_menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volta_menuActionPerformed
+        // TODO add your handling code here:
+        tela_ini voltaM = new tela_ini();
+        voltaM.setLocationRelativeTo(null);
+        voltaM.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_volta_menuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -340,7 +353,6 @@ public class Tela_venda extends javax.swing.JFrame {
     private javax.swing.JTextField codigo;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -365,5 +377,6 @@ public class Tela_venda extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JButton volta_menu;
     // End of variables declaration//GEN-END:variables
 }
