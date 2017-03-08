@@ -165,10 +165,10 @@ public class Tela_excluir extends javax.swing.JFrame {
 
     private void jButton_ExcluirItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_ExcluirItemActionPerformed
     
-        int campoExcluir = Integer.parseInt(jTextField_cod_Excluir.getText());
-        conecta.executaSQL("delete from produto where id_produto='"+campoExcluir+"'");//chama metodo da classe ConectaBanco para realizar a exclusao
         
-        // TODO add your handling code here:
+        int campoExcluir = Integer.parseInt(jTextField_cod_Excluir.getText()); // TODO add your handling code here:
+        conecta.executaSQL("delete from produto where id_produto='"+campoExcluir+"'");//chama metodo da classe ConectaBanco para realizar a exclusao
+        JOptionPane.showMessageDialog(null,"Item excluido com sucesso.");
     }//GEN-LAST:event_jButton_ExcluirItemActionPerformed
 
     private void botao_voltaEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_voltaEstoqueActionPerformed

@@ -11,7 +11,6 @@ import java.util.logging.Logger;
 
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author nome
@@ -39,15 +38,14 @@ public class ConectaBanco {
    
    public void executaSQL(String sql){
        try {
-           stm = conn.createStatement(rs.TYPE_SCROLL_INSENSITIVE, rs.CONCUR_READ_ONLY);
+           stm = conn.createStatement(rs.TYPE_SCROLL_INSENSITIVE,rs.CONCUR_READ_ONLY);
            rs = stm.executeQuery(sql);
-           
-       } catch (SQLException ex) {
-           // JOptionPane.showMessageDialog(null, "erro de executaSQL\n"+ex.getMessage());
+   
+     } catch (SQLException ex) {
+           JOptionPane.showMessageDialog(null, "erro de executaSQL\n"+ex.getMessage());
             
        }
-   
-   }
+      }
    
    public void desconecta(){//metodo para fechar a conexao com o banco de dados
        try {
